@@ -1,0 +1,38 @@
+from setuptools import setup
+
+setup(
+    name="nagato-ai",
+    version="0.0.16",
+    packages=["nagato"],
+    description="The open framework for Q&A finetuning LLMs on private data",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    author="Ismail Pelaseyed",
+    author_email="ismail@superagent.sh",
+    url="https://github.com/homanp/nagato",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+    ],
+    install_requires=[
+        "python-decouple>=3.8",
+        "pydantic>=1.10.7",
+        "flake8>=6.0.0",
+        "ruff>=0.0.265",
+        "black>=23.3.0",
+        "pinecone-client>=2.2.2",
+        "unstructured>=0.10.16",
+        "requests>=2.31.0",
+        "colorlog>=6.7.0",
+        "vulture>=2.7",
+        "llama-index>=0.8.37",
+        "pypdf>=3.16.2",
+        "tiktoken>=0.5.1",
+        "sentence-transformers>=2.2.2",
+        "replicate>=0.15.4",
+        "wheel>=0.41.0",
+        "python-dotenv>=1.0.0",
+        "tqdm>=4.66.1",
+        "setuptools>=68.2.2",
+    ],
+)

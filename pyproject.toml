@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "nagato-ai"
+version = "0.0.16"
+description = ""
+authors = ["Ismail Pelaseyed"]
+readme = "./README.md"
+packages = [{include = "nagato"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-decouple = "^3.8"
+pydantic = "^1.10.7"
+flake8 = "^6.0.0"
+ruff = "^0.0.265"
+black = "^23.3.0"
+pinecone-client = "^2.2.2"
+unstructured = "^0.10.16"
+requests = "^2.31.0"
+colorlog = "^6.7.0"
+vulture = "^2.7"
+llama-index = "^0.8.37"
+pypdf = "^3.16.2"
+tiktoken = "^0.5.1"
+sentence-transformers = "^2.2.2"
+replicate = "^0.15.4"
+wheel = "^0.41.0"
+python-dotenv = "^1.0.0"
+tqdm = "^4.66.1"
+setuptools = "^68.2.2"
+cohere = "^4.32"
+litellm = "^0.12.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.vulture]
+exclude = [
+    "*settings.py",
+    "*/docs/*.py",
+    "*/test_*.py",
+    "*/.venv/*.py",
+    ]
+ignore_decorators = ["@app.route", "@require_*"]
+ignore_names = ["visit_*", "do_*"]
+make_whitelist = true
+min_confidence = 100
+paths = ["."]
+sort_by_size = true
+verbose = false
+
+[tool.ruff]
+exclude = [
+    "*settings.py",
+    "*/docs/*.py",
+    "*/test_*.py",
+    "*/.venv/*.py",
+    "whitelist.py"
+    ]
